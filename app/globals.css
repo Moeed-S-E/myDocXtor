@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Design tokens (see .kiro/steering/ui.md §3.1).
+ * Accent: a single saturated indigo. Warm-gray neutrals, 6 steps.
+ * HSL channels only, so Tailwind can apply opacity.
+ */
+@layer base {
+  :root {
+    /* Self-contained system font stacks (no third-party font CDN; design §6). */
+    --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --font-mono: ui-monospace, "SFMono-Regular", "Menlo", "Consolas",
+      "Liberation Mono", monospace;
+
+    --background: 40 20% 99%;
+    --foreground: 24 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 24 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 10% 10%;
+
+    --muted: 40 10% 96%;
+    --muted-foreground: 24 6% 42%;
+
+    --border: 30 8% 88%;
+    --input: 30 8% 88%;
+    --ring: 243 75% 59%;
+
+    --primary: 243 75% 59%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 10% 94%;
+    --secondary-foreground: 24 10% 12%;
+
+    --accent: 243 75% 59%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 142 71% 40%;
+    --warning: 38 92% 50%;
+    --danger: 0 72% 51%;
+
+    --radius: 12px;
+  }
+
+  .dark {
+    --background: 24 10% 8%;
+    --foreground: 40 15% 96%;
+
+    --card: 24 9% 11%;
+    --card-foreground: 40 15% 96%;
+
+    --popover: 24 9% 11%;
+    --popover-foreground: 40 15% 96%;
+
+    --muted: 24 8% 16%;
+    --muted-foreground: 30 8% 64%;
+
+    --border: 24 8% 20%;
+    --input: 24 8% 20%;
+    --ring: 243 75% 66%;
+
+    --primary: 243 75% 66%;
+    --primary-foreground: 24 10% 8%;
+
+    --secondary: 24 8% 18%;
+    --secondary-foreground: 40 15% 96%;
+
+    --accent: 243 75% 66%;
+    --accent-foreground: 24 10% 8%;
+
+    --success: 142 60% 48%;
+    --warning: 38 92% 56%;
+    --danger: 0 72% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Respect reduced motion globally (UI steering §3.1). */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Visible focus rings for keyboard users (R-A11Y-1). */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}

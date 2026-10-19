@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="myDocXtor">
+  <rect width="512" height="512" rx="96" fill="#4f46e5"/>
+  <g fill="none" stroke="#ffffff" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M176 120h112l72 72v200a24 24 0 0 1-24 24H176a24 24 0 0 1-24-24V144a24 24 0 0 1 24-24z"/>
+    <path d="M288 120v72h72"/>
+    <circle cx="256" cy="300" r="40"/>
+    <path d="M256 268v-16M256 348v-16M224 300h-16M304 300h-16"/>
+  </g>
+</svg>

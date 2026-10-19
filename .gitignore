@@ -1,0 +1,19 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+.env*
+playwright-report/
+test-results/
+.DS_Store
+
+# Vercel
+.vercel/
+
+# Kiro spec & steering docs (internal planning; not part of the product)
+.kiro/
+requirements.md
+design.md
+tasks.md
+Kiro Build Pack*.md
