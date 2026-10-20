@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { FileLock2 } from "lucide-react";
 import { CommandPalette } from "./command-palette";
-import { PrivacyBadge } from "./privacy-badge";
 import { ThemeToggle } from "./theme-toggle";
 
 /** Sticky 56px header (UI steering §3.2). */
@@ -16,7 +15,6 @@ export function Header() {
         <CommandPalette />
       </div>
       <div className="flex shrink-0 items-center gap-2">
-        <PrivacyBadge />
         <ThemeToggle />
       </div>
     </header>
