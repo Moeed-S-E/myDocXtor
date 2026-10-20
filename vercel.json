@@ -3,7 +3,6 @@
   "buildCommand": "next build",
   "outputDirectory": "out",
   "framework": null,
-  "nodeVersion": "20.x",
   "cleanUrls": true,
   "trailingSlash": true,
   "headers": [
