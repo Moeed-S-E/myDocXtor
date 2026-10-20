@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     apple: [{ url: "/icon.svg" }],
   },
   appleWebApp: { capable: true, title: "myDocXtor", statusBarStyle: "default" },
+  verification: {
+    google: "1e6y_gl7PxEFmFDhLWD7HA6O3N1VdJEzszQkfhRlkfI",
+  },
 };
 
 export const viewport: Viewport = {
