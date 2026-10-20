@@ -19,7 +19,7 @@ import type { NextConfig } from "next";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const nextConfig: NextConfig = {
-  // output: "export",
+  output: "export",
   reactStrictMode: true,
   // Required for static export: no server-side image optimization.
   images: { unoptimized: true },
