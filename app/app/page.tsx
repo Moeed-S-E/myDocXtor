@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { HomeDropzone } from "@/components/shell/home-dropzone";
+// import { HomeDropzone } from "@/components/shell/home-dropzone";
 import { ToolGrid } from "@/components/shell/tool-grid";
 
 export const metadata: Metadata = {
@@ -21,7 +21,8 @@ export default function AppHomePage() {
             processed inside your browser — no upload, ever.
           </p>
         </div>
-        <HomeDropzone />
+        {/* Disable as in future enable and then fix the context issue */}
+        {/* <HomeDropzone /> */}
       </section>
       <ToolGrid />
     </div>
